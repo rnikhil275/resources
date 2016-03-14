@@ -4,6 +4,16 @@ These are [David Coven's](github.com/mrcoven94) person notes as derived from Mic
 ```ruby
 rails s -p $PORT -b $IP
 ```
+#### Running Jekyll on c9.io server
+```ruby
+jekyll serve --host $IP --port $PORT --baseurl ''
+```
+#### Adding admin permission via rails console
+```ruby
+U = User.find(1)
+U.update_attribute :status, "admin"
+```
+
 #### Adding Image with Paperclip 
 After you fill in the paperclip gem, and run bundle install, make sure ImageMagick is installed via
 
